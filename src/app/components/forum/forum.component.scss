@@ -1,0 +1,133 @@
+/* Variables de color principales */
+:root {
+  --duoc-color-primary: #006ab3;  /* Azul DUOC UC */
+  --duoc-color-secondary: #f18e26;  /* Naranja DUOC UC */
+  --duoc-color-background: #f5f5f5;  /* Gris claro */
+  --duoc-color-text: #d3c7c7;  /* Gris oscuro */
+  --duoc-color-muted: #ffffff;  /* Gris medio */
+}
+
+/* General styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--duoc-color-background);
+  color: var(--duoc-color-text);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Foro cards */
+.forum-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.forum-card-title {
+  color: var(--duoc-color-primary);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.forum-card-content {
+  color: var(--duoc-color-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.forum-card-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.forum-card-actions ion-button {
+  --ion-button-background: var(--duoc-color-secondary);
+  --ion-color-on-background: white;
+}
+
+.forum-card-actions ion-button:hover {
+  background-color: var(--duoc-color-primary);
+}
+
+/* Cabecera del foro "Publicaciones recientes" */
+.recent-posts-header {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.recent-posts-header .ion-card-title {
+  margin: 0;
+}
+
+/* Letras resaltadas */
+.recent-posts-header, .forum-card-title, .forum-card-content, ion-card-title, ion-card-content {
+  color: black;
+}
+
+/* Formato de Grid y Col para contenido del foro */
+ion-grid {
+  margin-top: 20px;
+}
+
+ion-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+ion-col {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+ion-col[size-md="6"] {
+  max-width: 48%;
+}
+
+ion-card-content {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--duoc-color-muted);
+}
+
+ion-card-title {
+  color: var(--duoc-color-primary);
+}
+
+ion-card-subtitle {
+  color: var(--duoc-color-muted);
+}
+
+/* Ajustes de hover */
+ion-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Opciones de botón flotante (FAB) */
+ion-fab-button {
+  transition: transform 0.3s ease;
+}
+
+ion-fab-button:hover {
+  transform: scale(1.1); 
+}

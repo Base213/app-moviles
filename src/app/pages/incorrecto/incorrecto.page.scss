@@ -1,0 +1,31 @@
+.bg-image {
+  --background: #EC9716 url('/assets/images/pao.jpg') no-repeat center center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Asegura que ocupe toda la pantalla */
+  background-position: center;
+}
+
+.center-box {
+  background-color: #ff5757;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 700px; /* Aumenta el ancho máximo del cuadro */
+  width: 80%; /* Ajusta el ancho relativo para pantallas pequeñas */
+  margin: 0 auto; /* Centra horizontalmente */
+}
+
+
+ion-button {
+  color: white; /* Color del texto */
+  font-size: 14px; /* Tamaño del texto */
+  padding: 4px 12px; /* Espaciado interno */
+  width: 150px; /* Ancho del botón */
+  height: 40px; /* Altura del botón */
+  border-radius: 8px; /* Bordes redondeados */
+  margin: 20px auto 0; /* Centrar el botón horizontalmente y agregar margen superior */
+  display: block; /* Asegura que el botón esté alineado como un bloque */
+}

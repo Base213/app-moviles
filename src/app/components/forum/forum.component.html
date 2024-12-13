@@ -1,0 +1,68 @@
+<ion-content [fullscreen]="true">
+  <div class="background-container" >
+    <img class="background-image" src="/assets/images/pao.jpg" alt="Fondo">
+  </div>
+
+  <a id="topOfPage" href="#topOfPage"></a>
+
+  <!-- Formulario para crear/editar publicaciones -->
+  <ion-card class="post-form-card">
+    <ion-card-header>
+      <ion-card-title>{{ 'Forum.ManagementTitle' | translate }}</ion-card-title>
+      <ion-card-subtitle>{{ selectedPostText }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating" color="primary">{{ 'Forum.Title' | translate }}</ion-label>
+        <ion-input [(ngModel)]="post.title" placeholder="{{ 'Forum.EnterTitle' | translate }}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating" color="primary">{{ 'Forum.Description' | translate }}</ion-label>
+        <ion-textarea [(ngModel)]="post.body" placeholder="{{ 'Forum.EnterDescription' | translate }}"></ion-textarea>
+      </ion-item>
+
+      <div class="action-buttons">
+        <ion-button color="medium" shape="round" (click)="cleanPost()">{{ 'Forum.Clean' | translate }}</ion-button>
+        <ion-button color="primary" shape="round" (click)="savePost()">
+          {{ post.id ? ('Forum.Update' | translate) : ('Forum.Save' | translate) }}
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Sección para las publicaciones recientes -->
+  <ion-card class="recent-posts-header">
+    <ion-card-title class="con-padding-top">{{ 'Forum.RecentPosts' | translate }}</ion-card-title>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <!-- Publicaciones de los usuarios -->
+      <ion-col size="12" size-md="6" *ngFor="let post of posts; trackBy: getPostId">
+        <ion-card>
+          <ion-card-header>
+            <h6>{{ 'Forum.Post' | translate }} #{{ post.id }} {{ post.author }}</h6>
+            <h4>{{ post.title }}</h4>
+          </ion-card-header>
+
+          <ion-card-content>
+            <p>{{ post.body }}</p>
+          </ion-card-content>
+
+          <!-- Botones de acción -->
+          <div class="post-action-buttons">
+            <ion-fab-button size="small" color="primary" (click)="editPost(post)">
+              <ion-icon name="pencil-outline"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button size="small" color="danger" (click)="deletePost(post)">
+              <ion-icon name="trash-outline"></ion-icon>
+            </ion-fab-button>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

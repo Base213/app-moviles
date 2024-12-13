@@ -1,0 +1,83 @@
+<ion-content [fullscreen]="true" class="ion-padding-horizontal">
+
+  <div class="background-container">
+    <img class="background-image" src="/assets/images/pao.jpg" alt="Fondo">
+  </div>
+
+  <ion-card class="custom-card">
+    <ion-card-content>
+
+
+      <h4 class="title-containers"> Registro de Cuenta </h4>
+
+ 
+      <div class="input-container">
+  
+        <ion-item class="input-item">
+          <ion-label class="input-label" style="color: #2C3E50;"> Cuenta </ion-label>
+          <ion-input type="text" [(ngModel)]="usuario.userName" placeholder="Ej: atorres"></ion-input>
+        </ion-item>
+
+        <ion-item class="input-item">
+          <ion-label class="input-label" style="color: #2C3E50;"> Nombres </ion-label>
+          <ion-input type="text" [(ngModel)]="usuario.firstName" placeholder="Ej: Ana"></ion-input>
+        </ion-item>
+
+        <ion-item class="input-item">
+          <ion-label class="input-label" style="color: #2C3E50;"> Apellidos </ion-label>
+          <ion-input type="text" [(ngModel)]="usuario.lastName" placeholder="Ej: Torres"></ion-input>
+        </ion-item>
+
+        <ion-item class="input-item">
+          <ion-label class="input-label" style="color: #2C3E50;"> Correo </ion-label>
+          <ion-input type="text" [(ngModel)]="usuario.email" placeholder="Ej: atorres@duocuc.cl"></ion-input>
+        </ion-item>
+
+        <ion-item class="input-item">
+          <ion-label class="input-label" style="color: #2C3E50;"> Direccion </ion-label>
+          <ion-input type="text" [(ngModel)]="usuario.address" placeholder="Ej: Alameda #54"></ion-input>
+        </ion-item>
+        
+        <ion-item class="input-item" style="color: #2C3E50;">
+          <ion-label class="input-label"> Pregunta Secreta </ion-label>
+          <ion-input type="text" [(ngModel)]="usuario.secretQuestion" placeholder="Ej: ¿Cual es tu animal favorito?"></ion-input>
+        </ion-item>
+
+        <ion-item class="input-item" style="color: #2C3E50;">
+          <ion-label class="input-label"> Respuesta Secreta </ion-label>
+          <ion-input type="text" [(ngModel)]="usuario.secretAnswer" placeholder="Ej: gato"></ion-input>
+        </ion-item>
+
+        <ion-item class="input-item" style="color: #2C3E50;">
+          <ion-label class="input-label" style="color: #2C3E50;"> Nivel Educacional </ion-label>
+          <ion-select placeholder="Seleccione nivel" [(ngModel)]="usuario.educationalLevel.id">
+            <ion-select-option *ngFor="let educationalLevel of listaNivelesEducacionales" [value]="educationalLevel.id">
+              {{ educationalLevel.name }}
+            </ion-select-option>
+          </ion-select>
+        </ion-item>
+
+
+        <ion-item class="input-item" style="color: #2C3E50;">
+          <ion-label class="input-label"> Contraseña </ion-label>
+          <ion-input type="password" [(ngModel)]="usuario.password" placeholder="Ej: 1234"></ion-input>
+        </ion-item>
+
+        <ion-item class="input-item"> 
+          <ion-label class="input-label" style="color: #2C3E50;"> Repetir Contraseña </ion-label>
+          <ion-input type="password" [(ngModel)]="usuario.confirmPassword" placeholder="Ej: 1234"></ion-input>
+        </ion-item>
+
+        <div class="ion-text-center margin-top-6" >
+          <ion-button (click)="crearCuenta()" shape="round" size="small">
+            Crear Cuenta
+          </ion-button>
+          <ion-button (click)="ingreso()" shape="round" size="small">
+            Iniciar sesión
+          </ion-button>
+          
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

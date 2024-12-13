@@ -1,0 +1,92 @@
+.custom-toolbar {
+  --background: #042335; /* Cambia el fondo del ion-toolbar al color azul deseado */
+}
+
+
+/* Contenedor flex que centra su contenido */
+.flex-container {
+  display: flex; /* Aquí activas el contenedor flex */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+  
+}
+
+.centered-card {
+  max-width: 350px; /* Limita el ancho máximo del recuadro */
+  width: 90%; /* Ajuste responsivo */
+  border-radius: 12px; /* Bordes redondeados */
+  padding: 15px; /* Espaciado interno */
+  background-color: white !important; /* Forzar fondo blanco */
+}
+
+ion-card {
+  --background: white !important; /* Aplicar fondo blanco a todos los cards */
+}
+
+
+
+.login-input {
+  margin-bottom: 15px; /* Espaciado entre campos */
+}
+
+ion-button {
+  --background:rgb(236, 151, 22); /* Botón amarillo estilo DUOC UC */
+  font-family: 'Lato Regular' !important;
+}
+/* Contenedor flex que centra su contenido */
+.flex-container {
+  display: flex; /* Aquí activas el contenedor flex */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+  flex-direction: column; /* Coloca los elementos uno debajo del otro */
+  margin-top: -90px; /* Ajusta este valor para subir más los elementos */
+  
+}
+
+/* Estilo para la imagen encima del recuadro */
+.logo-above-card {
+  display: flex; /* Aquí activas el contenedor flex */
+  max-width: 300px; /* Limita el tamaño máximo }de la imagen */
+  margin-bottom: 10px; /* Reduce el espaciado entre la imagen y el recuadro */
+  
+}
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espaciado entre botones */
+  padding: 10px;
+}
+
+/* Botones con bordes ligeramente redondeados, sombreado y color azul */
+.custom-button {
+--background: #007bff; /* Color azul */
+--border-radius: 8px; /* Bordes ligeramente redondeados */
+--padding-start: 10px;
+--padding-end: 10px;
+--min-height: 40px; /* Asegura que los botones sean cuadrados pero no demasiado pequeños */
+font-size: 14px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+position: relative;
+top: -280px; /* Ajusta la posición si es necesario */
+margin-top: 300px; /* Ajusta el margen superior */
+}
+
+/* Botón "Ingresar" específico */
+.enter-button {
+--background: #007bff; /* Color azul */
+--border-radius: 8px; /* Bordes ligeramente redondeados */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+
+ion-input {
+--background: white !important; /* Fondo blanco */
+--color: black !important; /* Texto negro */
+--border: 1px solid #ccc; /* Opcional, para el borde del input */
+}
+
+ion-item {
+--background: white !important; /* Fuerza fondo blanco en el contenedor del input */
+}

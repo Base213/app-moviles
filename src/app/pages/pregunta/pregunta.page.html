@@ -1,0 +1,59 @@
+<ion-content 
+  fullscreen="true" 
+  style="background-image: url('assets/img/fondo.jpg'); background-size: cover; background-position: center;">
+  
+  <!-- Título principal con el logo -->
+  <ion-title class="ion-padding-top ion-text-center">
+    <!-- Logo de la página -->
+    <img src="assets/images/logo_azul.png" style="height: 80px;">
+    <!-- Título del sistema -->
+    <h1>Sistema de Asistencia <br> DuocUC</h1>
+  </ion-title>
+
+  <!-- Contenedor principal -->
+  <div class="ion-padding-vertical">
+    <!-- Tarjeta centrada para el formulario -->
+    <ion-card 
+      class="ion-text-center ion-padding-vertical" 
+      style="padding-left: 5%; padding-right: 5%; max-width: 400px; margin: 0 auto;">
+      
+      <!-- Título de la tarjeta -->
+      <ion-card-title class="ion-text-center">
+        <ion-label>
+          <!-- Encabezados para los pasos -->
+          <h2>Recuperar contraseña</h2>
+          <h3>Paso 2: Responde la pregunta secreta</h3>
+          <!-- Muestra información del usuario si existe -->
+          <h4 *ngIf="user">{{ user.firstName }} {{ user.lastName }}<br>{{ user.secretQuestion }}</h4>
+        </ion-label>
+      </ion-card-title>
+
+      <!-- Formulario para responder la pregunta secreta -->
+      <form>
+        <ion-card-content>
+          <!-- Campo de entrada para la respuesta del usuario -->
+          <ion-item>
+            <ion-input 
+              name="respuesta" 
+              label="Ingresa tu respuesta" 
+              labelPlacement="floating" 
+              type="text" 
+              [(ngModel)]="respuestaUsuario">
+            </ion-input>
+          </ion-item>
+
+          <!-- Botón para enviar la respuesta -->
+          <ion-button (click)="Responder()" shape="round" expand="block">
+            Recuperar Contraseña
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </ion-button>
+        </ion-card-content>
+      </form>
+
+      <!-- Enlace para volver al inicio de sesión -->
+      <ion-label>
+        <a (click)="ingreso()">Iniciar Sesión</a>
+      </ion-label>
+    </ion-card>
+  </div>
+</ion-content>

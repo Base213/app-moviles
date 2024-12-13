@@ -1,0 +1,86 @@
+<ion-content [fullscreen]="true" class="ion-padding-horizontal">
+  <div class="background">
+    <div class="book">
+      <ion-card class="custom-card">
+        <ion-card-content>
+          <br>
+          <b class="ion-text-center">
+            <h4 class="title ion-text-center"> Mis Datos Personales </h4>
+          </b>
+          <br>
+
+          <ion-item class="input-item small-width">
+            <ion-label class="input-label"> Cuenta </ion-label>
+            <ion-input id="userName" type="text" [(ngModel)]="usuario.userName" placeholder="atorres"></ion-input>
+          </ion-item>
+
+          <ion-item class="input-item small-width">
+            <ion-label class="input-label"> Nombres </ion-label>
+            <ion-input type="text" [(ngModel)]="usuario.firstName" placeholder="Ej: Ana"></ion-input>
+          </ion-item>
+
+          <ion-item class="input-item small-width">
+            <ion-label class="input-label"> Apellidos </ion-label>
+            <ion-input type="text" [(ngModel)]="usuario.lastName" placeholder="Ej: Torres"></ion-input>
+          </ion-item>
+
+          <ion-item class="input-item small-width">
+            <ion-label class="input-label"> Correo </ion-label>
+            <ion-input type="text" [(ngModel)]="usuario.email" placeholder="Ej: atorres@duocuc.cl"></ion-input>
+          </ion-item>
+
+          <ion-item class="input-item small-width">
+            <ion-label class="input-label"> Pregunta Secreta </ion-label>
+            <ion-input type="text" [(ngModel)]="usuario.secretQuestion" placeholder="Ej: ¿Cual es tu animal favorito?"></ion-input>
+          </ion-item>
+
+          <ion-item class="input-item small-width">
+            <ion-label class="input-label"> Respuesta Secreta </ion-label>
+            <ion-input type="text" [(ngModel)]="usuario.secretAnswer" placeholder="Ej: gato"></ion-input>
+          </ion-item>
+
+          <ion-item class="input-item small-width">
+            <ion-label class="input-label"> Nivel Educacional </ion-label>
+            <ion-select placeholder="Seleccione nivel" [(ngModel)]="usuario.educationalLevel.id">
+              <ion-select-option *ngFor="let educationalLevel of listaNivelesEducacionales" [value]="educationalLevel.id">
+                {{ educationalLevel.name }}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item class="input-item small-width">
+            <ion-label class="input-label"> Fecha Nacimiento </ion-label>
+            <input style="text-align: right; border: 0px;" 
+              type="date"
+              [(ngModel)]="usuario.dateOfBirth">
+          </ion-item>
+
+          <ion-item class="input-item small-width">
+            <ion-label class="input-label"> Contraseña </ion-label>
+            <ion-input type="password" [(ngModel)]="usuario.password" placeholder="Ej: 1234"></ion-input>
+          </ion-item>
+
+          <ion-item class="input-item small-width">
+            <ion-label class="input-label"> Repetir Contraseña </ion-label>
+            <ion-input type="password" [(ngModel)]="usuario.confirmPassword" placeholder="Ej: 1234"></ion-input>
+          </ion-item>
+
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6">
+                <ion-button (click)="actualizar()" shape="block" size="small">
+                  Actualizar
+                </ion-button>
+              </ion-col>
+              <ion-col size="6">
+                <ion-button (click)="mostrarDatosPersona()" shape="block" size="small">
+                  Ver datos
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

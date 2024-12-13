@@ -1,0 +1,57 @@
+/* General styles for ion-content */
+ion-content {
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --padding-end: 20px;
+  --padding-start: 20px;
+  --background: #fff url('/assets/images/pao.jpg') no-repeat center center / cover;
+}
+
+/* Styling for input labels */
+::ng-deep ion-input .label-text {
+  color: #ffffff;
+}
+
+/* Font settings */
+ion-content, h5 {
+  font-family: 'Merriweather', 'Merriweather Bold', 'Merriweather Black', 'Merriweather Italic', 'Merriweather BoldItalic' !important;
+}
+h1 {
+  font-family: 'Merriweather Light';
+  color: white;
+}
+
+h4, p {
+  font-family: 'Merriweather Light' !important;
+  color: #000000; /* Consistent white color */
+}
+
+h2, h3 {
+  font-family: 'Merriweather Bold' !important;
+  color: #000000; /* Consistent white color */
+}
+
+/* Link styling */
+a {
+  font-family: 'Lato BoldItalic' !important;
+  color: wrgba(243, 245, 247, 0.479)
+}
+
+/* Card styling */
+ion-card {
+  --background: #ffffff; /* Bright yellow background */
+}
+
+/* Input field styling */
+ion-input {
+  --background: rgb(31, 30, 30); /* Dark background for input */
+  background-color: #d4d4d4; /* Light gray for fallback */
+  color: #ffffff; /* White text for readability */
+}
+
+/* Background color for the host */
+:host {
+  --ion-background-color: #201c1c; /* Dark background for the app */
+  background-color: #201c1c;
+  --background: #201c1c;
+}

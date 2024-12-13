@@ -1,0 +1,41 @@
+<ion-content style="--background: url('assets/images/pao.jpg') no-repeat center center / cover;">
+
+  <div class="ion-padding-vertical">
+
+    <ion-card class="ion-text-center ion-padding-vertical" style="width: 100%; max-width: 400px; margin: 0 auto;">
+
+      <!-- Mueve el título dentro del ion-card -->
+      <ion-card-title class="ion-text-center">
+        <img src="assets/images/logo_azul.png" style="height: 150px;">
+        <h1>Sistema de Asistencia <br> DuocUC</h1>
+      </ion-card-title>
+
+      <ion-card-title class="ion-text-center">
+        <ion-label>
+          <h2 style="color: black;">Recuperar contraseña</h2>
+          <h4 style="color: black;">Paso 1: Ingresa tu correo</h4>
+        </ion-label>
+      </ion-card-title>
+
+      <form>
+        <ion-card-content>
+          <ion-item>
+            <ion-input name="correo" label="Ingresa tu Correo" labelPlacement="floating" type="text" [(ngModel)]="usuario.email"></ion-input>
+          </ion-item>
+
+          <br>
+          <ion-button (click)="SiguientePaso()" shape="round" expand="block">
+            Recuperar Contraseña
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </ion-button>
+        </ion-card-content>
+      </form>
+
+      <ion-label>
+        <a (click)="ingreso()">Iniciar Sesión</a>
+      </ion-label>
+    </ion-card>
+
+  </div>
+
+</ion-content>

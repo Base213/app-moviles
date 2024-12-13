@@ -1,0 +1,49 @@
+.centrar-arriba {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; 
+  height: 100%;           
+  padding-top: 10px;     
+}
+
+ion-button {
+  --background: #ffffff;  
+  --color: rgb(255, 255, 255);        
+  margin-top: 10px;
+}
+
+ion-icon {
+  --color: white;        
+}
+
+ion-card {
+  margin-bottom: 16px;  
+  border-radius: 8px;  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ion-row {
+  display: flex; 
+  justify-content: flex-end; 
+}
+
+ion-card {
+  background-color: #b3ebef !important; 
+  color: #525252 !important; 
+}
+
+.titulo-usuarios {
+  color: #000000; 
+  font-weight: 900;
+  font-size: 1.6rem; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+  margin: 0; 
+  text-align: center; 
+}
+
+.titulo {
+  color: rgb(71, 6, 87);
+  font-weight: bold;
+  font-size: 1.2 rem;
+}
+

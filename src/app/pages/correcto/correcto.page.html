@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>correcto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="bg-image">
+  <div class="center-box">
+    <img src="assets/images/correcto.png" class="center-image">
+    <h1 style="color: #ffffff;">Sistema de Asistencia <br> DuocUC</h1>
+
+    <div>
+      <h1 style="color: #ffffff;">Recuperar contraseña</h1>
+      <p style="color: #ffffff;">
+        Verificación completada, su contraseña es: <b>{{user.password}}</b>
+      </p>
+    </div>
+    <ion-button expand="block" (click)="iniciarSesion()" class="center-button">
+      Volver al Login
+    </ion-button>
+
+  </div>
+</ion-content>

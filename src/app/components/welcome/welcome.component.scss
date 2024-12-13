@@ -1,0 +1,10 @@
+.background-image {
+  background-image: url('/assets/images/codigo.jpg'); /* Cambia esta ruta según la ubicación de tu imagen */
+  background-size: cover; /* Asegura que la imagen cubra todo el área */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  padding: 100px; /* Añade espacio interno si es necesario */
+  border-radius: 8px; /* Si deseas bordes redondeados opcional */
+  color: rgb(236, 151, 22); /* Ajusta el color del texto si es necesario */
+}
+

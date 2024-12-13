@@ -1,0 +1,46 @@
+<ion-content [fullscreen]="true">
+
+  <ion-toolbar>
+    <div class="centrar-arriba">
+      <div class="enmarcar">
+        <h4 class="titulo-usuarios">Administrar los Usuarios</h4>
+      </div>
+    </div>
+  </ion-toolbar>
+
+<ion-grid>
+  <ion-row>
+    <ion-col size="12" size-md="3" *ngFor="let usuario of usuarios">
+      <ion-card class="small-card-dark">
+        <ion-card-header>
+          <ion-card-title class="titulo">
+            {{ usuario.firstName }} {{ usuario.lastName }}
+          </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content class="content-flex">
+          <p>{{ usuario.email }}</p>
+        </ion-card-content>
+
+        <ion-row class="ion-align-items-center">
+          <ion-col size="auto" class="ion-text-end">
+            <ion-button 
+              fill="solid" 
+              color="danger"  
+              (click)="deleteUser(usuario.userName)">
+              <ion-icon name="trash" style="color: white"></ion-icon> 
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+<ion-card *ngIf="usuarios.length === 0">
+  <ion-card-header>
+    <ion-card-title>No hay usuarios registrados en el sistema</ion-card-title>
+  </ion-card-header>
+</ion-card>
+</ion-content>

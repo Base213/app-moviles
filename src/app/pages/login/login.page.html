@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar class="transparent-bg custom-toolbar">
+    <div slot="start" class="ion-margin">
+      <app-language #selectLanguage></app-language>
+    </div>
+    <div class="show-in-landscape">
+      <h1 style="text-align: center; margin: 0; color: rgb(236, 151, 22);">
+        Sistema de asistencia DUOC UC
+      </h1>
+    </div>
+    <div slot="end" class="ion-margin">
+      <ion-button shape="round" size="small" (click)="navigateTheme()">
+        Tema
+        <ion-icon slot="start" name="color-wand-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <img class="background-image" src="/assets/images/pao.jpg">
+
+
+  <!-- Contenedor Flex principal para centrar todo el contenido -->
+  <div class="flex-container">
+
+    <!-- Tarjeta de login centrada -->
+    <ion-card class="login-container transparent-input" style="height: 450px;"> 
+      <!-- Imagen del logo dentro del card -->
+      <img src="assets/images/logo_azul.png" alt="Logo Azul" class="logo-inside-card" style="max-width: 450px; width: 100%; margin: 0 auto;"/>
+
+      <!-- Título de subtítulo -->
+      <h3 class="subtitle-text" style="text-align: center; color: #042335; margin-top: 7px;">
+        {{ 'Login.Title.Login' | translate }}
+      </h3>
+
+      <!-- Contenido del Card -->
+      <ion-card-content class="transparent-input text-center">
+        <!-- Campo de correo electrónico -->
+        <ion-item class="margin-bottom-6">
+          <ion-input 
+            label="{{ 'Login.Label.Email' | translate }}" 
+            labelPlacement="floating" 
+            [(ngModel)]="correo" 
+            placeholder="{{ 'Login.Placeholder.Email' | translate }}">
+          </ion-input>
+        </ion-item>
+
+        <!-- Campo de contraseña -->
+        <ion-item class="margin-bottom-6">
+          <ion-input 
+            label="{{ 'Login.Label.Password' | translate }}" 
+            labelPlacement="floating" 
+            [(ngModel)]="password" 
+            placeholder="{{ 'Login.Placeholder.Password' | translate }}" 
+            type="password">
+          </ion-input>
+        </ion-item>
+
+        <!-- Botón Ingresar -->
+        <div class="ion-text-center margin-top-6">
+          <ion-button class="enter-button normal-text" shape="round" (click)="login()">
+            {{ 'Login.Button.Login' | translate }}
+          </ion-button>
+        </div>
+
+        <!-- Botones adicionales -->
+        <div class="flex-buttons" style="display: flex; justify-content: space-around; margin-top: 10px;">
+          <ion-button 
+            color="secondary" 
+            size="small" 
+            shape="round" 
+            (click)="passwordRecovery()" 
+            class="custom-button">
+            {{ 'Login.Button.ForgotPassword' | translate }}
+          </ion-button>
+          <ion-button 
+            color="primary" 
+            size="small" 
+            shape="round" 
+            (click)="registerNewUser()" 
+            class="custom-button">
+            {{ 'Login.Button.Signin' | translate }}
+          </ion-button>
+          <ion-button 
+            color="primary" 
+            size="small" 
+            shape="round" 
+            (click)="navigateToMap()" 
+            class="custom-button">
+            {{ 'MapPage.Button.Route' | translate }}
+          </ion-button>
+        </div>
+
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+</ion-content>
